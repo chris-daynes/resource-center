@@ -41,33 +41,33 @@ class App extends Component {
               docked={false}
               onRequestChange={open => this.setState({ open })}
             >
-              <NavLink exact to='/'>
+              <NavLink exact to='/' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>Home</MenuItem>
               </NavLink>
 
-              <NavLink to='/logos'>
+              <NavLink to='/logos' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>Logos</MenuItem>
               </NavLink>
 
-              <NavLink to='/posters'>
+              <NavLink to='/posters' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>Posters</MenuItem>
               </NavLink>
 
-              <NavLink to='/letterhead'>
+              <NavLink to='/letterhead' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>Letterhead</MenuItem>
               </NavLink>
 
-              <NavLink to='/share-a-story'>
+              <NavLink to='/share-a-story' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>Share a Story</MenuItem>
               </NavLink>
 
-              <NavLink to='/service-request'>
+              <NavLink to='/service-request' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>
                   Service Request
                 </MenuItem>
               </NavLink>
 
-              <NavLink to='/tutorial'>
+              <NavLink to='/tutorial' activeClassName='active'>
                 <MenuItem onTouchTap={this.handleClose}>Tutorial</MenuItem>
               </NavLink>
             </Drawer>
