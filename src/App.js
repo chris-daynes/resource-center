@@ -5,9 +5,9 @@ import { MuiThemeProvider } from 'material-ui/styles'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import fusiTheme from './fusiTheme'
 import Drawer from 'material-ui/Drawer'
-import MenuItem from 'material-ui/MenuItem'
 import AppBar from 'material-ui/AppBar'
-import { BrowserRouter, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
+import SideBarItem from './SideBarItem'
 
 import './App.css'
 
@@ -41,35 +41,41 @@ class App extends Component {
               docked={false}
               onRequestChange={open => this.setState({ open })}
             >
-              <NavLink exact to='/' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>Home</MenuItem>
-              </NavLink>
-
-              <NavLink to='/logos' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>Logos</MenuItem>
-              </NavLink>
-
-              <NavLink to='/posters' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>Posters</MenuItem>
-              </NavLink>
-
-              <NavLink to='/letterhead' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>Letterhead</MenuItem>
-              </NavLink>
-
-              <NavLink to='/share-a-story' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>Share a Story</MenuItem>
-              </NavLink>
-
-              <NavLink to='/service-request' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>
-                  Service Request
-                </MenuItem>
-              </NavLink>
-
-              <NavLink to='/tutorial' activeClassName='active'>
-                <MenuItem onTouchTap={this.handleClose}>Tutorial</MenuItem>
-              </NavLink>
+              <SideBarItem
+                linkTo='/'
+                primaryText='Home'
+                handleClose={this.handleClose}
+              />
+              <SideBarItem
+                linkTo='/logos'
+                primaryText='Logos'
+                handleClose={this.handleClose}
+              />
+              <SideBarItem
+                linkTo='/posters'
+                primaryText='Posters'
+                handleClose={this.handleClose}
+              />
+              <SideBarItem
+                linkTo='/letterhead'
+                primaryText='Letterhead'
+                handleClose={this.handleClose}
+              />
+              <SideBarItem
+                linkTo='/share-a-story'
+                primaryText='Share a Story'
+                handleClose={this.handleClose}
+              />
+              <SideBarItem
+                linkTo='/service-request'
+                primaryText='Service Request'
+                handleClose={this.handleClose}
+              />
+              <SideBarItem
+                linkTo='/tutorial'
+                primaryText='Tutorial'
+                handleClose={this.handleClose}
+              />
             </Drawer>
 
             <Route exact path='/' render={() => <h1>Home View</h1>} />
